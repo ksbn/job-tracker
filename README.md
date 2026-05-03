@@ -1,16 +1,52 @@
-# React + Vite
+# 🗂️ Job Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and simple React app to track your job applications — built as a portfolio project.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ➕ Add job applications with company, role and status
+- 🗑️ Delete applications you no longer need
+- 🔍 Filter by status: Applied, Interview, Offer, Rejected
+- 💾 Data saved in localStorage — persists after refresh
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (Vite)
+- JavaScript
+- CSS
+- localStorage
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone the repo
+git clone https://github.com/ksbn/job-tracker.git
+
+# Install dependencies
+cd job-tracker
+npm install
+
+# Run locally
+npm run dev
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── JobForm.jsx     # Form to add new jobs
+│   ├── JobList.jsx     # Renders list of job cards
+│   ├── JobCard.jsx     # Single job card with delete
+│   └── Filters.jsx     # Filter buttons by status
+├── App.jsx             # Main app logic and state
+├── main.jsx            # Entry point
+└── styles.css          # Global styles
+```
+
+## 🎯 What I Learned
+
+- Managing state with `useState` and `useEffect`
+- Passing props between components
+- Persisting data with localStorage
+- Component-based architecture in React
