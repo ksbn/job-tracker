@@ -26,11 +26,13 @@ function JobForm({ onAdd }) {
         value={role}
         onChange={(e) => setRole(e.target.value)}
       />
-      <select value={status} onChange={(e) => setStatus(e.target.value)}>
-        <option>Applied</option>
-        <option>Interview</option>
-        <option>Offer</option>
-        <option>Rejected</option>
+
+      <label htmlFor="status">Status</label>
+      <select id="status" value={status} onChange={(e) => setStatus(e.target.value)}>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Offer">Offer</option>
+        <option value="Rejected">Rejected</option>
       </select>
       <button type="submit">Add Job</button>
     </form>

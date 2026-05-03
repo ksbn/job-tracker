@@ -7,6 +7,7 @@ function JobList({ jobs, onDelete }) {
 
   return (
     <div>
+      <h2>Jobs</h2>
       {jobs.map((job) => (
         <JobCard key={job.id} job={job} onDelete={onDelete} />
       ))}

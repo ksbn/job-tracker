@@ -8,7 +8,10 @@ function JobCard({ job, onDelete }) {
         <p>{job.role}</p>
       </div>
       <span className={statusClass}>{job.status}</span>
-      <button className="delete-btn" onClick={() => onDelete(job.id)}>✕</button>
+      <button className="delete-btn" aria-label="Delete" onClick={() => onDelete(job.id)}
+>
+  Delete
+</button>
     </div>
   )
 }

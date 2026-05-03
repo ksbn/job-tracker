@@ -31,9 +31,11 @@ function App() {
   return (
     <div>
       <h1>Job Tracker</h1>
+    <main>
       <JobForm onAdd={handleAdd} />
       <Filters current={filter} onChange={setFilter} />
       <JobList jobs={filteredJobs} onDelete={handleDelete} />
+    </main>    
     </div>
   )
 }
