@@ -29,15 +29,30 @@ function App() {
 
 
   return (
-    <div>
-      <h1>Job Tracker</h1>
-    <main>
-      <JobForm onAdd={handleAdd} />
-      <Filters current={filter} onChange={setFilter} />
-      <JobList jobs={filteredJobs} onDelete={handleDelete} />
-    </main>    
+    <div className="app">
+    <h1>Job Tracker</h1>
+    <p className="subtitle">Track your job applications in one place</p>
+    
+    <div className="stats">
+      <div className="stat-card">
+        <div className="number">{jobs.length}</div>
+        <div className="label">Total</div>
+      </div>
+      <div className="stat-card">
+        <div className="number">{jobs.filter(j => j.status === "Interview").length}</div>
+        <div className="label">Interviews</div>
+      </div>
+      <div className="stat-card">
+        <div className="number">{jobs.filter(j => j.status === "Offer").length}</div>
+        <div className="label">Offers</div>
+      </div>
     </div>
+
+    <JobForm onAdd={handleAdd} />
+    <Filters current={filter} onChange={setFilter} />
+    <JobList jobs={filteredJobs} onDelete={handleDelete} />
+  </div>
   )
 }
-
+    
 export default App
