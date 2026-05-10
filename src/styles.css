@@ -14,7 +14,7 @@ body {
 .app {
   max-width: 860px;
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 40px 48px;
 }
  
 h1 {
@@ -90,6 +90,23 @@ form button {
 form button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 140px;
+}
+
+.input-error {
+  border-color: #f87171 !important;
+}
+
+.error-msg {
+  color: #f87171;
+  font-size: 0.75rem;
+  margin-top: 4px;
 }
  
 /* Stats bar */
